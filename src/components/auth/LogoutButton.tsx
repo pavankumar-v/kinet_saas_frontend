@@ -5,11 +5,7 @@ import { Button } from "@/components/ui/button";
 const LogoutButton: React.FC = () => {
   const { logout } = useAuth0();
 
-  return (
-    <Button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-      Log Out
-    </Button>
-  );
+  return <Button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</Button>;
 };
 
 export default LogoutButton;
