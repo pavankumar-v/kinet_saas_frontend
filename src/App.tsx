@@ -1,39 +1,28 @@
 import "./App.css";
-import { Button } from "@/components/ui/button";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
+import Dashboard from "@components/Pages/Dashboard/Dashboard";
+import { BrowserRouter, Router, Routes, Route, Link, Navigate, RouteProps, Outlet } from "react-router-dom";
+import LandingPage from "@components/Pages/Home/LandingPage";
+import { useAuth0 } from "@auth0/auth0-react";
+import Spinner from "@components/Loader/Spinner";
 
 function App() {
   return (
     <div className="h-screen">
-      <Button variant="outline">Button</Button>
-
-      <AlertDialog>
-        <AlertDialogTrigger asChild>
-          <Button variant="outline">Show Dialog</Button>
-        </AlertDialogTrigger>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-            <AlertDialogDescription>This action cannot be undone. This will permanently delete your account and remove your data from our servers.</AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction>Continue</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/auth" element={<LandingPage />} />
+          <Route element={<PrivateRoutes />}>
+            <Route element={<Dashboard />} path="/" />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
+
+const PrivateRoutes = () => {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  return isLoading ? <Spinner /> : isAuthenticated ? <Outlet /> : <Navigate to="/auth" />;
+};
 
 export default App;
