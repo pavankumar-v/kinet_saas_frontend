@@ -1,7 +1,8 @@
-# **kinet SaaS Software [Frontend]**
-Kinet is a Project Management Saas Software to Manage your Projects using Agile Methodology
+<img src="https://45218278.fs1.hubspotusercontent-na1.net/hubfs/45218278/kinetLogoWhite.svg" width="300" >
 
-<img src="https://45218278.fs1.hubspotusercontent-na1.net/hubfs/45218278/kinetLogoWhite.svg" >
+# **🪓 Yo! Work In Progress 🪓**
+# **kinet SaaS Software [Frontend]**
+  Kinet is a Project Management Saas Software to Manage your Projects using Agile Methodology
 
 <br />
 
