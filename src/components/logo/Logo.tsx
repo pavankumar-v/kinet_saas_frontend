@@ -1,12 +1,12 @@
 import React from 'react'
-import KinetLogo from "@assets/svg/logoKinet.svg"
+import logoKinet from "@assets/svg/kinetLogo.svg"
 
 type Props = {}
 
-const Logo: React.FC<Props> = (props) => {
+const KinetLogo: React.FC<Props> = (props) => {
   return (
-    <img src={KinetLogo} alt="" width="200"/>
+    <img src={logoKinet} alt="" width="150"/>
   )
 }
 
-export default Logo
+export default KinetLogo
