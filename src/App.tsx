@@ -3,14 +3,12 @@ import Dashboard from "@components/Pages/Dashboard/Dashboard";
 import { BrowserRouter, Router, Routes, Route, Link, Navigate, RouteProps, Outlet } from "react-router-dom";
 import LandingPage from "@components/Pages/Home/LandingPage";
 import { useAuth0 } from "@auth0/auth0-react";
-import Spinner from "@components/Loader/Spinner"
+import Spinner from "@components/Loader/Spinner";
 
 function App() {
   return (
     <div className="h-screen">
       <BrowserRouter>
-        <Link to="/auth"> Home </Link>
-        <Link to="/"> Dashboard </Link>
         <Routes>
           <Route path="/auth" element={<LandingPage />} />
           <Route element={<PrivateRoutes />}>
@@ -24,10 +22,7 @@ function App() {
 
 const PrivateRoutes = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  return(
-      isLoading ? <Spinner />
-      : isAuthenticated ? <Outlet/> : <Navigate to="/auth"/>
-  )
-}
+  return isLoading ? <Spinner /> : isAuthenticated ? <Outlet /> : <Navigate to="/auth" />;
+};
 
 export default App;
