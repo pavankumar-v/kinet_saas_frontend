@@ -1,10 +1,14 @@
+import LogoutButton from '@/components/auth/LogoutButton'
+import { LogOut } from 'lucide-react'
 import React from 'react'
 
 type Props = {}
 
 const Dashboard: React.FC<Props> = (props) => {
   return (
-    <div>Dashboard</div>
+    <div>Dashboard
+      <LogoutButton />
+    </div>
   )
 }
 
