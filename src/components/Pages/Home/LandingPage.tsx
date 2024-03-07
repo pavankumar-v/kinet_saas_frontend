@@ -8,11 +8,21 @@ type Props = {};
 
 const LandingPage: React.FC<Props> = (props) => {
   return (
-    <div>
-      <Logo />
-      <LoginButton />
-      <LogoutButton />
-      <UserInfo />
+    <div className="h-full w-full flex justify-center items-center">
+      <div>
+        <div className="flex flex-col items-center justify-center">
+          <Logo />
+          <h2 className="text-2xl font-bold">Software Development Tool</h2>
+          <p>Agile Process Done Easy. Track tasks from Todo to Release</p>
+        </div>
+
+        <br />
+        <div className="flex justify-center gap-2">
+          <LoginButton />
+          <LogoutButton />
+        </div>
+        <UserInfo />
+      </div>
     </div>
   );
 };
