@@ -38,6 +38,7 @@ Backend [Kinet SaaS Backend]()
 - 📟 Create Kanban Boards and Track Progress
 - 📄 Create and Maintain Documents In Workspace
 - 👥 Maintain Teams and Access to Workspaces
+- 📟 Integrate Applications to your workspaces
 
 <br />
 
