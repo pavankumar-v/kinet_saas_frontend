@@ -5,19 +5,23 @@ import App from "./App";
 import { Auth0Provider } from "@auth0/auth0-react";
 import reportWebVitals from "./reportWebVitals";
 import AUTH0_CONFIG from "@/config/auth";
+import { Provider } from "react-redux";
+import store from "@/store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
-    <Auth0Provider
-      domain={AUTH0_CONFIG.DOMAIN}
-      clientId={AUTH0_CONFIG.CLIENT_ID}
-      authorizationParams={{
-        redirect_uri: window.location.origin,
-      }}
-    >
-      <App />
-    </Auth0Provider>
+    <Provider store={store}>
+      <Auth0Provider
+        domain={AUTH0_CONFIG.DOMAIN}
+        clientId={AUTH0_CONFIG.CLIENT_ID}
+        authorizationParams={{
+          redirect_uri: window.location.origin,
+        }}
+      >
+        <App />
+      </Auth0Provider>
+    </Provider>
   </React.StrictMode>
 );
 
