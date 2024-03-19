@@ -4,6 +4,7 @@ import { BrowserRouter, Router, Routes, Route, Link, Navigate, RouteProps, Outle
 import LandingPage from "@components/Pages/Home/LandingPage";
 import { useAuth0 } from "@auth0/auth0-react";
 import Spinner from "@components/ui/Spinner";
+import PageLoader from "@components/ui/PageLoader";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
 
 const PrivateRoutes = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  return isLoading ? <Spinner /> : isAuthenticated ? <Outlet /> : <Navigate to="/auth" />;
+  return isLoading ? <PageLoader /> : isAuthenticated ? <Outlet /> : <Navigate to="/auth" />;
 };
 
 export default App;
