@@ -3,7 +3,7 @@ import Dashboard from "@components/Pages/Dashboard/Dashboard";
 import { BrowserRouter, Router, Routes, Route, Link, Navigate, RouteProps, Outlet } from "react-router-dom";
 import LandingPage from "@components/Pages/Home/LandingPage";
 import { useAuth0 } from "@auth0/auth0-react";
-import Spinner from "@components/Loader/Spinner";
+import Spinner from "@components/ui/Spinner";
 
 function App() {
   return (

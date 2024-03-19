@@ -1,4 +1,4 @@
-import Spinner from "@/components/Loader/Spinner";
+import Spinner from "@/components/ui/Spinner";
 import LoginButton from "@/components/auth/LoginButton";
 import LogoutButton from "@/components/auth/LogoutButton";
 import Logo from "@/components/logo/Logo";
