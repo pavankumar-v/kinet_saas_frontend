@@ -1,10 +1,4 @@
 import LogoutButton from '@/components/auth/LogoutButton'
-import { Button } from '@/components/ui/button'
-import AUTH0_CONFIG from '@/config/auth'
-import { useAuth0 } from '@auth0/auth0-react'
-import { config } from 'localforage'
-import { LogOut } from 'lucide-react'
-import React, { useEffect } from 'react'
 
 type Props = {}
 
