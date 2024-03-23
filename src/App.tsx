@@ -1,9 +1,8 @@
 import "./App.css";
 import Dashboard from "@components/Pages/Dashboard/Dashboard";
-import { BrowserRouter, Router, Routes, Route, Link, Navigate, RouteProps, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
 import LandingPage from "@components/Pages/Home/LandingPage";
 import { useAuth0 } from "@auth0/auth0-react";
-import Spinner from "@components/ui/Spinner";
 import PageLoader from "@components/ui/PageLoader";
 import { useEffect } from "react";
 
@@ -23,7 +22,7 @@ function App() {
 }
 
 const PrivateRoutes = () => {
-  const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
+  const { isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
 
   async function setAccessToken() {
     if (isAuthenticated) {
