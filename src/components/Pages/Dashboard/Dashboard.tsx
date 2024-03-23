@@ -1,5 +1,4 @@
 import LogoutButton from '@/components/auth/LogoutButton'
-import { LogOut } from 'lucide-react'
 import React from 'react'
 
 type Props = {}
