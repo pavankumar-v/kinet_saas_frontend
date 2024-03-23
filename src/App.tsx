@@ -5,6 +5,7 @@ import LandingPage from "@components/Pages/Home/LandingPage";
 import { useAuth0 } from "@auth0/auth0-react";
 import Spinner from "@components/ui/Spinner";
 import PageLoader from "@components/ui/PageLoader";
+import { useEffect } from "react";
 
 function App() {
   return (
@@ -22,8 +23,28 @@ function App() {
 }
 
 const PrivateRoutes = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
-  return isLoading ? <PageLoader /> : isAuthenticated ? <Outlet /> : <Navigate to="/auth" />;
+  const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
+
+  async function setAccessToken() {
+    if (isAuthenticated) {
+      const token = await getAccessTokenSilently();
+      console.log(token);
+    }
+  }
+
+  useEffect(() => {
+    setAccessToken();
+  }, [isAuthenticated]);
+
+  if (isLoading) {
+    return <PageLoader />;
+  }
+
+  if (isAuthenticated) {
+    return <Outlet />;
+  }
+
+  return <Navigate to="/auth" />;
 };
 
 export default App;
