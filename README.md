@@ -1,6 +1,6 @@
 <img src="https://45218278.fs1.hubspotusercontent-na1.net/hubfs/45218278/kinetLogoWhite.svg" width="300" >
 
-# **🪓 Yo! Work In Progress 🪓 [ongoing doc](https://docs.google.com/document/d/1vLWydXDe0JuY1mXwlJHZ8rxG9jZxZ27hU9BzpwppIXs/edit) **
+# **🪓 Work In Progress 🪓 [ongoing doc](https://docs.google.com/document/d/1vLWydXDe0JuY1mXwlJHZ8rxG9jZxZ27hU9BzpwppIXs/edit) **
 # **kinet SaaS Software [Frontend]**
   Kinet is a Project Management Saas Software to Manage your Projects using Agile Methodology
 
