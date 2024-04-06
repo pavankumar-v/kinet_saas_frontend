@@ -1,14 +1,13 @@
-import LogoutButton from '@/components/auth/LogoutButton'
-import React from 'react'
+import LogoutButton from '@/components/auth/LogoutButton';
+import React from 'react';
 
-type Props = {}
-
-const Dashboard: React.FC<Props> = (props) => {
+const Dashboard: React.FC = () => {
   return (
-    <div>Dashboard
+    <div>
+      Dashboard
       <LogoutButton />
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

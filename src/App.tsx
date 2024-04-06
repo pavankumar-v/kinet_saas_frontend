@@ -1,12 +1,19 @@
-import "./App.css";
-import Dashboard from "@components/Pages/Dashboard/Dashboard";
-import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
-import LandingPage from "@components/Pages/Home/LandingPage";
-import { useAuth0 } from "@auth0/auth0-react";
-import PageLoader from "@components/ui/PageLoader";
-import { useEffect } from "react";
+import React from 'react';
+import './App.css';
+import Dashboard from '@components/Pages/Dashboard/Dashboard';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  Outlet,
+} from 'react-router-dom';
+import LandingPage from '@components/Pages/Home/LandingPage';
+import { useAuth0 } from '@auth0/auth0-react';
+import PageLoader from '@components/ui/PageLoader';
+import { useEffect } from 'react';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="h-screen">
       <BrowserRouter>
@@ -19,7 +26,7 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 const PrivateRoutes = () => {
   const { isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
