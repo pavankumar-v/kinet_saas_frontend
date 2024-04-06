@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export type Todo = {
   id: string;
@@ -6,12 +6,12 @@ export type Todo = {
 };
 
 export const exampleSlice = createSlice({
-  name: "todos",
+  name: 'todos',
   initialState: [],
   reducers: {
     addTodo: (state: Todo[], action) => {
       const todo: Todo = {
-        id: "2345",
+        id: '2345',
         text: action.payload,
       };
 

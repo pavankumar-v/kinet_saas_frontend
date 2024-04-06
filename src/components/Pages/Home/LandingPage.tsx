@@ -1,16 +1,14 @@
-import Spinner from "@/components/ui/Spinner";
-import LoginButton from "@/components/auth/LoginButton";
-import LogoutButton from "@/components/auth/LogoutButton";
-import Logo from "@/components/logo/Logo";
-import { Button } from "@/components/ui/button";
-import { useAuth0 } from "@auth0/auth0-react";
-import React from "react";
-import { Link } from "react-router-dom";
+import Spinner from '@/components/ui/Spinner';
+import LoginButton from '@/components/auth/LoginButton';
+import LogoutButton from '@/components/auth/LogoutButton';
+import Logo from '@/components/logo/Logo';
+import { Button } from '@/components/ui/button';
+import { useAuth0 } from '@auth0/auth0-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-type Props = {};
-
-const LandingPage: React.FC<Props> = (props) => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+const LandingPage: React.FC = () => {
+  const { isAuthenticated, isLoading } = useAuth0();
 
   return (
     <div className="h-full w-full flex justify-center items-center">
